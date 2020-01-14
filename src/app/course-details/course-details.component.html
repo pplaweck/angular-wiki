@@ -1,0 +1,11 @@
+<div *ngIf="course">
+    <h2>{{course.name}} details</h2>
+    <div><span>id: </span>{{course.id}}</div><span>semester: </span>{{course.semester}}
+    <div><span>ects: </span>{{course.ects}}</div>
+    <div><span>places: </span>{{course.number_of_students}}</div>
+    <div><span>course type: </span>{{course.course_type}}</div>
+    <div><span>free places: </span>{{course.free_places}}</div>
+    <div><span>rate: </span>{{course.rate}}</div>
+    <div><span>number of rates: </span>{{course.number_of_rates}}</div>
+    <button (click)="goBack()">Go back</button>
+</div>

@@ -1,0 +1,14 @@
+<h2>Our Courses</h2>
+<ul class="courses">
+    <li *ngFor="let course of courses, index as i">
+        <a routerLink="/detail/{{course.id}}">
+            <span class="badge">{{i+1}}</span> {{course.name}}
+        </a>
+        <div><span>semester: </span>{{course.semester}}</div>
+        <div><span>ects: </span>{{course.ects}}</div>
+        <div><span>places: </span>{{course.number_of_students}}</div>
+        <div><span>course type: </span>{{course.course_type}}</div>
+        <div><span><button (click)="deleteCourse(this.course)">Usuń kurs</button></span></div>
+    </li>
+</ul>
+<!--<app-course-details [course]="selectedCourse"></app-course-details>-->
